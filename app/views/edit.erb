@@ -1,0 +1,7 @@
+<% update_url = "/articles/#{@id}" %>
+<form method='post' action="/articles/<%= @id%>" >
+<input id="hidden" type="hidden" name="_method" value="patch">
+<p>Current Title: <%= @articles.find(@id).title%> New Title: <input id='title' type='text' name='title'></p>
+<p>Current Content: <%= @articles.find(@id).content%> New Content: <input id='content' type='text' name='content'></p>
+<input id='submit' type='submit'>
+</form>
